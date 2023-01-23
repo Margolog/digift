@@ -1,21 +1,24 @@
-from selene import command, be, have
+import allure
+from selene import be
 from selene.support.shared import browser
-from modal.application_manager import ApplicationManager
 
 
+class Certificates:
+    def click_on_the_500(self):
+        with allure.step('Choose 500'):
+            browser.element('[data-value="500"]').click()
+        return self
 
-def test_open(app: ApplicationManager):
-    app.main.open_page()
-    (
-        app.certificate.click_on_the_500()
+    def checx_active_500(self):
+        with allure.step('Checx value 500'):
+            browser.element('[data-value="500"]').should(be.enabled)
+        return self
 
-        .checx_value_500()
-        .checx_active_500()
-     )
+    def checx_value_500(self):
+        with allure.step('Checx value 500'):
+            browser.element('[value="500"]').should(be.present)
+        return self
 
-    browser.element('[data-value="500"]').click()
-    browser.element('[data-value="500"]').should(be.enabled)
-    browser.element('[value="500"]').should(be.present)
 
 
     browser.element('[data-value="1000"]').click()
