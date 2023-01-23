@@ -1,43 +1,70 @@
-from selene import command, be, have
-from selene.support.shared import browser
 from modal.application_manager import ApplicationManager
 
 
 
-def test_open(app: ApplicationManager):
+def test_choose_500(app: ApplicationManager):
     app.main.open_page()
+
     (
         app.certificate.click_on_the_500()
 
-        .checx_value_500()
-        .checx_active_500()
+        .check_value_500()
+        .check_active_500()
      )
 
-    browser.element('[data-value="500"]').click()
-    browser.element('[data-value="500"]').should(be.enabled)
-    browser.element('[value="500"]').should(be.present)
+
+def test_choose_1000(app: ApplicationManager):
+    app.main.open_page()
+
+    (
+        app.certificate.click_on_the_1000()
+
+        .check_value_1000()
+        .check_active_1000()
+     )
 
 
-    browser.element('[data-value="1000"]').click()
-    browser.element('[data-value="1000"]').should(be.enabled)
-    browser.element('[value="1000"]').should(be.present)
+def test_choose_2000(app: ApplicationManager):
+    app.main.open_page()
+
+    (
+         app.certificate.click_on_the_2000()
+
+         .check_value_2000()
+         .check_active_2000()
+    )
 
 
-    browser.element('[data-value="2000"]').click()
-    browser.element('[data-value="2000"]').should(be.enabled)
-    browser.element('[value="2000"]').should(be.present)
+def test_choose_3000(app: ApplicationManager):
+    app.main.open_page()
+
+    (
+        app.certificate.click_on_the_3000()
+
+        .check_value_3000()
+        .check_active_3000()
+    )
 
 
-    browser.element('[data-value="3000"]').click()
-    browser.element('[data-value="3000"]').should(be.enabled)
-    browser.element('[value="3000"]').should(be.present)
+def test_choose_5000(app: ApplicationManager):
+    app.main.open_page()
 
-    browser.element('[data-value="5000"]').click()
-    browser.element('[data-value="5000"]').should(be.enabled)
-    browser.element('[value="5000"]').should(be.present)
+    (
+        app.certificate.click_on_the_5000()
+
+        .check_value_5000()
+        .check_active_5000()
+    )
 
 
-    browser.element('[data-value="10000"]').click()
-    browser.element('[data-value="10000"]').should(be.enabled)
-    browser.element('[value="10000"]').should(be.present)
+def test_choose_10000(app: ApplicationManager):
+    app.main.open_page()
+
+    (
+        app.certificate.click_on_the_10000()
+
+        .check_value_10000()
+        .check_active_10000()
+    )
+
 
