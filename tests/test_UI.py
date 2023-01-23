@@ -3,7 +3,6 @@ from modal.application_manager import ApplicationManager
 
 
 def test_choose_500(app: ApplicationManager):
-    app.main.open_page()
 
     (
         app.certificate.click_on_the_500()
@@ -14,7 +13,6 @@ def test_choose_500(app: ApplicationManager):
 
 
 def test_choose_1000(app: ApplicationManager):
-    app.main.open_page()
 
     (
         app.certificate.click_on_the_1000()
@@ -25,7 +23,6 @@ def test_choose_1000(app: ApplicationManager):
 
 
 def test_choose_2000(app: ApplicationManager):
-    app.main.open_page()
 
     (
          app.certificate.click_on_the_2000()
@@ -36,7 +33,6 @@ def test_choose_2000(app: ApplicationManager):
 
 
 def test_choose_3000(app: ApplicationManager):
-    app.main.open_page()
 
     (
         app.certificate.click_on_the_3000()
@@ -47,7 +43,6 @@ def test_choose_3000(app: ApplicationManager):
 
 
 def test_choose_5000(app: ApplicationManager):
-    app.main.open_page()
 
     (
         app.certificate.click_on_the_5000()
@@ -58,7 +53,6 @@ def test_choose_5000(app: ApplicationManager):
 
 
 def test_choose_10000(app: ApplicationManager):
-    app.main.open_page()
 
     (
         app.certificate.click_on_the_10000()
