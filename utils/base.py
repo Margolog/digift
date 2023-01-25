@@ -12,6 +12,6 @@ class BaseSession(Session):
 
 class JsTestTask:
     def __init__(self, name, image, price):
-        self.name = 'Alcatel'
-        self.image = image
-        self.price = price
+        self.name = []
+        self.image = []
+        self.price = []
