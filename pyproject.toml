@@ -17,7 +17,7 @@ pydantic = "^1.10.2"
 python-dotenv = "^0.21.0"
 pytest-voluptuous = "^1.2.0"
 voluptuous = ">=0.13.1,<0.14.0"
-
+curlify = "^2.2.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
