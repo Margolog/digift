@@ -1,8 +1,8 @@
 from modal.certificates import Certificates
-# from modal.page.main import MainPage
+from modal.js_test import Api
 
 
 class ApplicationManager:
     def __init__(self):
-        # self.main = MainPage()
         self.certificate = Certificates()
+        self.api_js = Api()
