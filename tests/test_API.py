@@ -1,12 +1,21 @@
-import requests
-from modal.application_manager import ApplicationManager
-from modal.js_test import Api
+from digift.API.products import JsTestTask
+from digift.API.session import APIsession
 
 
+def test_search_alcatel(base_session: APIsession):
 
-def test_api_js_test_task(app: ApplicationManager):
+    response = base_session.get_js_test_task(search='Alcatel', sort_field='name')
+    result = JsTestTask(response.json()['products'])
 
-    result = requests.get(app.api_js)
+    for item in result.products:
+        assert 'Alcatel' in item['name'], f'Ошибка поиска, Alcatel не содержится в поле "name" продукта {item}'
 
-    assert result.status_code == 200
-    # assert result.json()['name'] == name
+    def sort_by_name(prod):
+        return prod['name']
+
+    olol = result.products.copy()
+    result.products.sort(key=sort_by_name)
+
+    assert olol == result.products, 'Ответ не отсортирован по полю "name"'
+
+
