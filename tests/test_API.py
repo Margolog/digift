@@ -13,9 +13,9 @@ def test_search_alcatel(base_session: APIsession):
     def sort_by_name(prod):
         return prod['name']
 
-    olol = result.products.copy()
+    produce = result.products.copy()
     result.products.sort(key=sort_by_name)
 
-    assert olol == result.products, 'Ответ не отсортирован по полю "name"'
+    assert produce == result.products, 'Ответ не отсортирован по полю "name"'
 
 
