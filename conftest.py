@@ -8,9 +8,9 @@ import pytest
 from digift.API.session import APIsession
 
 
-@pytest.fixture(scope='session')
-def load_env():
-    load_dotenv()
+@pytest.hookimpl(tryfirst=True)
+def pytest_sessionstart():
+    load_dotenv
 
 
 @pytest.fixture(scope='session')
